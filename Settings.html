@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+<script>  
+</script>
+<script src="js/apexcharts.js"></script>
+<script type="text/javascript" src="js/dash.js"></script>
+
+<title id="title" onload="username()">Dashboard</title>
+ <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="css/Style.css">
+ <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Sniglet&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+
+</head>
+<body>
+
+		
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="img/Saftey.jpg" >
+      </div>
+      <a href="#user"><img id="icon" class="circle" style="color: black;"></a>
+      <a href="#name"><span class="white-text name" id="namee">John Doe</span></a>
+      <a href="#email"><span class="white-text email" id="Emailhol">rekt@gmail.com</span></a>
+    </div></li>
+    <li><a href="Dashboard.html"><i class="material-icons">house</i>Home</a></li>
+    <li><a href="Assignment.html"><i class="material-icons">book</i>Assignments</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">User Control</a></li>
+   <li><a class="waves-effect" href="Settings.html"><i class="material-icons">settings</i>Settings</a></li>
+    <li><a class="waves-effect" onclick="logout()"><i class="material-icons">directions_walk</i>Log Off</a></li>
+
+  </ul>
+
+  
+ <nav style="background-color: black; border-radius: 2px; z-index: 1; ">
+    <div class="nav-wrapper">
+      
+       <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i style=" float: left;" class="material-icons">menu</i></a>
+      <ul  class="right">
+      <a  href="#"><i  class="material-icons">help</i></a>
+      
+      </ul>
+    </div>
+  </nav>
+ <div id="page1">
+
+<table>
+    <tr class="row"><td><h2 style="color: black; font-size: 30px; font-family: 'Nunito', serif; text-align: center;">Send Error Logs</h2></td></tr>
+    <tr class="row"><td><h2 style="color: black; font-size: 30px; font-family: 'Nunito', serif; text-align: center;">Update Profile Image</h2>
+
+
+  
+<img class="uk-align-center" id="display" width="20%" height="20%">
+        <button  class=" uk-button uk-button-primary uk-align-center " type="button" uk-toggle="target: #modal-example">Update from Url</button>
+        <button class=" uk-button uk-button-primary uk-align-center " type="button" uk-toggle="target: #file-example">Update from file</button>
+        <div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 style="color: black; font-size: 30px; font-family: 'Nunito', serif; text-align: center;">Update Profile Image</h2>
+         <input style="width: 40%; margin: 0 auto; margin-bottom: 10px;" type="text" placeholder="image url" id="typer">
+         
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button  onclick="updateimage()" class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
+<div id="file-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 style="color: black; font-size: 30px; font-family: 'Nunito', serif; text-align: center;">Update Profile Image</h2>
+         <input style="width: 40%; margin: 0 auto; margin-bottom: 10px;" type="file" placeholder="image url" id="updat" >
+         
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button  onclick="updateimagefile()" class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
+    </td></tr>
+    <tr class="row"><td><h2 style="color: black; font-size: 30px; font-family: 'Nunito', serif; text-align: center;">Reset Account</h2><button style="margin: 0 auto;" class="uk-button uk-button-primary uk-align-center" onclick="PromtReset()" >Reset Account</button></td></tr>
+</table>
+</div>
+<div>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+	const slide_menu = document.querySelectorAll(".sidenav");
+	M.Sidenav.init(slide_menu, {});
+</script>
+
+
+<script type="text/javascript" src="js/Userprofile.js"></script>
+
+</body>
+</html>

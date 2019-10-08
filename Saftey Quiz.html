@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title id="title">Saftey Quiz</title>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+body {
+  font-family: 'Comfortaa', cursive;
+}
+.container{
+  align-items: center;
+}
+.option {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+ 
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+}
+.option:hover {
+  background: #f7f7f7;
+}
+.option:hover span {
+  background: #00d1b2;
+  color: white;
+}
+.option span {
+  position: relative;
+  border-radius: 5px;
+  border: solid 1px #00d1b2;
+  padding: 0.2rem 0.5rem 0;
+  width: 2.5rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: #00d1b2;
+
+}
+.navigation:before, .navigation:after {
+  content: ' - ';
+}
+@media screen and (min-width: 480px) {
+  #Signinout{
+    margin-left: 37vw;
+    margin-top: 10vh;
+  }
+  #Signup{
+    margin-top: 38vh;
+  }
+  #info{
+    margin-top: 5vh;
+  }
+  #Signin{
+    margin-top: 6vh;
+  }
+  
+  #infos{
+    margin-top: 20vh;
+  }
+  span{
+   margin-left: 30vw; 
+  }
+
+ }
+.q1{
+
+}
+  button {
+  
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 8px;
+  display: block;
+  width: 10%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+
+margin: 0 auto;
+
+}
+
+button:hover, #Signup:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+    }
+ </style>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+</head>
+<body >
+<section  class="hero is-primary is-fullheight">
+  <div style="text-align: center; margin: auto;  " class="hero-body">
+    <div class="container">
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+          <div class="has-text-centered">
+          <h1 class="title has-text-centered">Saftey Quiz</h1>
+          <h7 id=endtext class="subtitle has-text-centered is-uppercase is-7 navigation">QUESTION 1 OF 4</h7>
+          <h5 id="question" class="subtitle has-text-centered is-5">What does CSS stand for?</h5>
+          <div id=holdi style="align-items: ;">
+            
+          <p class="option ql has-text-grey-dark" data-number=1 >
+          Creative Style Sheets   
+          </p>
+       
+          <p class="option ql has-text-grey-dark" data-number=2>
+           Creative Style Sheets
+          </p>
+          <p class="option ql has-text-grey-dark" data-number="3">
+             Creative Style Sheets
+          </p>
+          <p class="option ql has-text-grey-dark" data-number="4" >
+            Creative Style Sheets
+          </p>
+
+        </div>
+        <h1 style="color: black;" id="scoreshow"></h1>
+          <button onclick="bob()" id="end" class="button is-primary is-inverted is-outlined is-rounded is-fullwidth">Next</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="js/Quiz.js"></script>
+</body>
+</html>
